@@ -1,0 +1,114 @@
+/* ═══════════════════════════════════════════
+   CAKE EMI — Global Styles
+   Palette: cream, dusty lavender, warm taupe
+   ═══════════════════════════════════════════ */
+
+:root {
+  /* Palette */
+  --cream:        #faf7f2;
+  --cream-dark:   #f2ece0;
+  --cream-mid:    #ede5d8;
+  --lavender:     #b8a9cc;
+  --lavender-deep:#9585b4;
+  --lavender-pale:#e8e0f0;
+  --taupe:        #8c7b6e;
+  --taupe-light:  #b5a898;
+  --brown:        #5c4a3a;
+  --text:         #3d3028;
+  --text-muted:   #8c7b6e;
+  --white:        #ffffff;
+
+  /* Typography */
+  --font-display: 'Playfair Display', 'Georgia', serif;
+  --font-body:    'Cormorant Garamond', 'Georgia', serif;
+  --font-ui:      'Jost', sans-serif;
+
+  /* Spacing */
+  --gap-xs:  0.5rem;
+  --gap-sm:  1rem;
+  --gap-md:  2rem;
+  --gap-lg:  4rem;
+  --gap-xl:  7rem;
+
+  /* Borders & Shadows */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 32px;
+  --shadow-soft: 0 4px 24px rgba(92, 74, 58, 0.08);
+  --shadow-card: 0 8px 40px rgba(92, 74, 58, 0.12);
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--cream);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 18px;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+  line-height: 1.2;
+  font-weight: 400;
+}
+
+p {
+  font-family: var(--font-body);
+  font-weight: 300;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  font-family: var(--font-ui);
+}
+
+input, textarea, select {
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--cream-dark); }
+::-webkit-scrollbar-thumb { background: var(--lavender); border-radius: 3px; }
+
+/* Utility */
+.visually-hidden {
+  position: absolute;
+  width: 1px; height: 1px;
+  overflow: hidden;
+  clip: rect(0,0,0,0);
+}
+
+/* Page fade-in */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(18px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.fade-up {
+  animation: fadeUp 0.65s ease both;
+}
+
+.fade-up-delay-1 { animation-delay: 0.1s; }
+.fade-up-delay-2 { animation-delay: 0.2s; }
+.fade-up-delay-3 { animation-delay: 0.3s; }
+.fade-up-delay-4 { animation-delay: 0.45s; }

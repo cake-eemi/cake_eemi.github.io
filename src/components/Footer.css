@@ -1,0 +1,44 @@
+.footer {
+  background: var(--cream-dark);
+  border-top: 1px solid var(--cream-mid);
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.footer__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer__brand {
+  font-size: 1.4rem;
+}
+
+.footer__brand-script {
+  font-family: var(--font-display);
+  font-style: italic;
+  color: var(--lavender-deep);
+}
+
+.footer__brand-serif {
+  font-family: var(--font-display);
+  font-weight: 500;
+  color: var(--brown);
+}
+
+.footer__tagline {
+  font-family: var(--font-body);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--taupe);
+}
+
+.footer__copy {
+  font-family: var(--font-ui);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  color: var(--taupe-light);
+  margin-top: 0.5rem;
+}
