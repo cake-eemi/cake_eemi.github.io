@@ -1,0 +1,107 @@
+.auth {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cream);
+    padding: 1.5rem;
+}
+
+.auth__card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    padding: 3rem 2.5rem;
+    width: 100%;
+    max-width: 380px;
+    text-align: center;
+    animation: fadeUp 0.5s ease both;
+}
+
+.auth__icon {
+    font-size: 2.8rem;
+    margin-bottom: 1rem;
+}
+
+.auth__title {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--brown);
+    margin-bottom: 0.75rem;
+}
+
+.auth__sub {
+    font-size: 0.92rem;
+    color: var(--taupe);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.auth__input {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: var(--radius-sm);
+    border: 1.5px solid var(--cream-mid);
+    background: var(--cream);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    color: var(--text);
+    text-align: center;
+    letter-spacing: 0.1em;
+    transition: border-color 0.2s;
+    margin-bottom: 0.5rem;
+}
+
+.auth__input:focus {
+    outline: none;
+    border-color: var(--lavender-deep);
+}
+
+.auth__input.error {
+    border-color: #c0392b;
+}
+
+.auth__error {
+    font-family: var(--font-ui);
+    font-size: 0.75rem;
+    color: #c0392b;
+    margin-bottom: 0.75rem;
+    letter-spacing: 0.04em;
+}
+
+.auth__btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.8rem 2rem;
+    border: 1.5px solid var(--lavender-deep);
+    border-radius: 60px;
+    font-family: var(--font-ui);
+    font-size: 0.78rem;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--lavender-deep);
+    background: transparent;
+    cursor: pointer;
+    transition: background 0.22s, color 0.22s, transform 0.18s;
+}
+
+.auth__btn:hover {
+    background: var(--lavender-deep);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+/* Wrong password shake */
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    20%       { transform: translateX(-8px); }
+    40%       { transform: translateX(8px); }
+    60%       { transform: translateX(-5px); }
+    80%       { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.5s ease;
+}

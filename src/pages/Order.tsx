@@ -28,19 +28,6 @@ export default function Order() {
       ? ALL_STEPS
       : ALL_STEPS.filter(s => s !== 'Base' && s !== 'Filling & Fruit');
 
-  // TODO fix this.
-  // Map visible step index → logical step index
-  const logicalStep = (() => {
-    if (!isCake && config.productType !== null) {
-      // skip steps 2 and 3 for cupcakes/cookies
-      if (step === 0) return 0;
-      if (step === 1) return 1;
-      if (step === 2) return 4; // Details
-      if (step === 3) return 5; // Contact
-    }
-    return step;
-  })();
-
   const price = calculatePrice(config);
 
   const canProceed = (): boolean => {
