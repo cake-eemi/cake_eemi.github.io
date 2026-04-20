@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "GIT_SSH_COMMAND=\"ssh -i ~/.ssh/noemi_ed25519 -F /dev/null\" gh-pages -d dist"
   },
   "dependencies": {
     "js-sha256": "^0.11.1",
