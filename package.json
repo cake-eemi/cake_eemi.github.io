@@ -1,6 +1,6 @@
 {
   "name": "cake_eemi.github.io",
-  "homepage": "https://cake_eemi.github.io",
+  "homepage": "https://cake-eemi.github.io",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "GIT_SSH_COMMAND=\"ssh -i ~/.ssh/noemi_ed25519 -F /dev/null\" gh-pages -d dist"
+    "deploy": "GIT_SSH_COMMAND=\"ssh -i ~/.ssh/noemi_ed25519 -F /dev/null\" gh-pages -d dist --no-history"
   },
   "dependencies": {
     "js-sha256": "^0.11.1",
